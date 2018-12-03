@@ -9,9 +9,27 @@ function setup() {
   
 }
 
+function keyPressed (){
+  if(key == ' ') {
+    var jump = createVector(0,-5)
+    person.applyForce(jump)
+  }
+}
+
+
 function draw() {
-  background(100);
- person.update();
+  background(51);
+  
+  
+  translate(-person.pos.x+50,0);
+  
+  
+  var gravity = createVector(0,0.1);
+  person.applyForce(gravity);
+  
+  
+ person.update()
+  person.edges();
  person.display();
   
   
