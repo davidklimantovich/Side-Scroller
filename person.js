@@ -8,9 +8,8 @@ function Person() {
   this.acc = createVector(0, 0);
   
   this.applyForce = function(force) {
-    var f = force.copy();
-    f.div(this.mass);
-    this.acc.add(f);
+  
+    this.acc.add(force);
   }
 
   this.update = function() {
@@ -27,13 +26,8 @@ function Person() {
 
   this.edges = function() {
     if (this.pos.y > height) {
-      this.vel.y *= -1;
+      this.vel.y *= 0;
       this.pos.y = height;
-    }
-
-    if (this.pos.x > width) {
-      this.vel.x *= -1;
-      this.pos.x = width;
-    }
+    } 
   }
 }
