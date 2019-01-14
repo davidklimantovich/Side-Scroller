@@ -4,7 +4,7 @@
 // Session 2: Array of Particles, multiple forces
 var person;
 function setup() {
-  createCanvas(640, 640);
+  createCanvas(1500, 640);
   person = new Person();
   
 }
@@ -24,7 +24,7 @@ function draw() {
   translate(-person.pos.x+50,0);
   
   
-  var gravity = createVector(0,0.1);
+  var gravity = createVector(0,0.9);
   person.applyForce(gravity);
   
   
